@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# coding: utf-8
 from flask import Flask, Response, request, send_file, current_app
 from bs4 import BeautifulSoup
 from Queue import Queue
@@ -16,7 +16,7 @@ import ssl
 import os
 import re
 
-app = Flask(__name__)
+app = Flask(__name__) # app是Flask的实例，它接收包或者模块的名字作为参数，但一般都是传递__name__。让flask.helpers.get_root_path函数通过传入这个名字确定程序的根目录，以便获得静态文件和模板文件的目录。 
 SHEETS_DIR = 'sheets'
 TTL = 21600
 MAX_CONCURRENT_TASKS = 6
